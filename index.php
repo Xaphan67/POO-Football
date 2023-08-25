@@ -19,7 +19,7 @@
             $pays4 = new Pays("Italie");
 
             // Déclaration des équipes
-            $equipe1 = new Equipe($pays1, "Parais Saint-Germain");
+            $equipe1 = new Equipe($pays1, "Paris Saint-Germain");
             $equipe2 = new Equipe($pays1, "Racing Club Stras");
             $equipe3 = new Equipe($pays2, "Real Madrid");
             $equipe4 = new Equipe($pays2, "FC Barcelone");
