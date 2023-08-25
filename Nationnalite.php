@@ -3,7 +3,7 @@
 class Nationnalite {
     private string $libelle;
 
-    public function __construct($string $libelle)
+    public function __construct(string $libelle)
     {
         $this->libelle = $libelle;
     }
