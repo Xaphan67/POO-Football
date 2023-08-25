@@ -5,10 +5,13 @@ class Carriere {
     private Equipe $equipe;
     private int $anneeSaison;
 
-    public function __construct(Joueur $joueur, Equipe $equipe, string $anneeSaison) {
+    public function __construct(Joueur $joueur, Equipe $equipe, int $anneeSaison) {
     $this->joueur = $joueur;
     $this->equipe = $equipe;
     $this->anneeSaison = $anneeSaison;
+
+    $this->joueur->ajouterCarriere($this);
+    $this->equipe->ajouterJoueur($joueur);
     }
 
     public function getJoueur() {
@@ -36,6 +39,6 @@ class Carriere {
     }
 
     public function __toString() {
-        return $this->joueur->getNom() . " - " . $this->equipe->getNom() . " (" . $this->anneeSaison . ")";
+        return $this->joueur . " (" . $this->anneeSaison . ")";
     }
 }

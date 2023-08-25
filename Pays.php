@@ -2,7 +2,8 @@
 
 class Pays {
     private string $nom;
-    private $equipes =array();
+    
+    private $equipes = array();
 
     public function __construct(string $nom)
     {
@@ -29,7 +30,7 @@ class Pays {
     // Liste les équipes affectées à ce pays
     public function listerEquipes()
     {
-        $result = "<h1>Equipes affectées au pays $this->nom :</h1>";
+        $result = "<h2>Equipes du pays $this->nom :</h2>";
         foreach ($this->equipes as $equipe)
         {
             $result .= $equipe . "<br>";

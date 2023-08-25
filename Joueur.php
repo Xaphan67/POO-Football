@@ -4,6 +4,7 @@ class Joueur {
     private string $prenom;
     private string $nom;
     private DateTime $dateNaissance;
+    private $carriere = array();
 
     public function __construct(string $prenom, string $nom, string $dateNaissance) {
         $this->prenom = $prenom;
@@ -23,6 +24,10 @@ class Joueur {
         return $this->dateNaissance;
     }
 
+    public function getCarriere() {
+        return $this->carriere;
+    }
+
     public function setPrenom(string $prenom) {
         $this->prenom = $prenom;
     }
@@ -37,5 +42,9 @@ class Joueur {
 
     public function __toString() {
         return $this->prenom . " " . $this->nom;
+    }
+
+    public function ajouterCarriere(Carriere $carriere) {
+        $this->carriere[] = $carriere;
     }
 }
