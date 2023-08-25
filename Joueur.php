@@ -66,7 +66,7 @@ class Joueur {
         $age = $now->diff($this->dateNaissance)->y;
         $result = "<h2>Carrière de $this</h2>
         <p>Nationnalité : $this->nationnalite<br>
-        Age: $age ans<<p>
+        Age: $age ans<p>
         <p>Historique des équipes :<br>";
         foreach ($this->carriere as $carriere) {
             $result .= $carriere->getEquipe()  . " (" . $carriere->getAnneeSaison() . ")<br>";
