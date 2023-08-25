@@ -6,12 +6,12 @@ class Carriere {
     private int $anneeSaison;
 
     public function __construct(Joueur $joueur, Equipe $equipe, int $anneeSaison) {
-    $this->joueur = $joueur;
-    $this->equipe = $equipe;
-    $this->anneeSaison = $anneeSaison;
+        $this->joueur = $joueur;
+        $this->equipe = $equipe;
+        $this->anneeSaison = $anneeSaison;
 
-    $this->joueur->ajouterCarriere($this);
-    $this->equipe->ajouterJoueur($joueur);
+        $this->joueur->ajouterCarriere($this);
+        $this->equipe->ajouterJoueur($joueur);
     }
 
     public function getJoueur() {
