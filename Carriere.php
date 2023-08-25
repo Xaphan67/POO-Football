@@ -23,7 +23,7 @@ class Carriere {
     }
 
     public function getAnneeSaison() {
-        return $this->getAnneeSaison;
+        return $this->anneeSaison;
     }
 
     public function setJoueur(Joueur $joueur) {

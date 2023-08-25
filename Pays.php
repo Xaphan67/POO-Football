@@ -30,7 +30,7 @@ class Pays {
     // Liste les équipes affectées à ce pays
     public function listerEquipes()
     {
-        $result = "<h2>Equipes du pays $this->nom :</h2>";
+        $result = "<h2>Equipes du pays $this :</h2>";
         foreach ($this->equipes as $equipe)
         {
             $result .= $equipe . "<br>";

@@ -41,7 +41,7 @@ class Equipe {
 
     // Affiche l'historique des joueurs de l'équipe
     public function historiqueJoueurs() {
-        $result = "<h2>Joueurs de l'équipe $this->nom</h2>";
+        $result = "<h2>Joueurs de l'équipe $this</h2>";
         if (count($this->joueurs) > 0) {
             foreach ($this->joueurs as $joueur) {
                 $carriere = $joueur->getCarriere();

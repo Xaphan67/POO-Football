@@ -26,19 +26,25 @@
             $equipe5 = new Equipe($pays3, "Manchester United");
             $equipe6 = new Equipe($pays4, "Juventus");
 
+            // Déclaration des nationnalitées
+            $nationnalite1 = new Nationnalite("France");
+            $nationnalite2 = new Nationnalite("Argentine");
+            $nationnalite3 = new Nationnalite("Brésil");
+            $nationnalite4 = new Nationnalite("Portugal");
+
             // Déclaration des joueurs
-            $joueur1 = new Joueur("Killian", "Mbappe", "1998-12-20");
-            $joueur2 = new Joueur("Lionel", "Messi", "1987-06-24");
-            $joueur3 = new Joueur("Neymar", "Junior", "1992-02-05");
-            $joueur4 = new Joueur("Cristiano ", "Ronaldo", "1985-02-05");
+            $joueur1 = new Joueur("Killian", "Mbappe", "1998-12-20", $nationnalite1);
+            $joueur2 = new Joueur("Lionel", "Messi", "1987-06-24", $nationnalite2);
+            $joueur3 = new Joueur("Neymar", "Junior", "1992-02-05", $nationnalite3);
+            $joueur4 = new Joueur("Cristiano ", "Ronaldo", "1985-02-05", $nationnalite4);
 
             // Déclaration des carrières des joueurs
             $carriere1 = new Carriere($joueur1, $equipe1, 2017);
             $carriere2 = new Carriere($joueur2, $equipe1, 2021);
             $carriere3 = new Carriere($joueur3, $equipe1, 2017);
             $carriere4 = new Carriere($joueur2, $equipe4, 2004);
-            $carriere5 = new Carriere($joueur4, $equipe6, 2018);
-            $carriere10 = new Carriere($joueur3, $equipe4, 2013);
+            $carriere5 = new Carriere($joueur3, $equipe4, 2013);
+            $carriere6 = new Carriere($joueur4, $equipe6, 2018);
         
             ?>
             <h1>Liste des équipes par pays :</h1>
@@ -50,7 +56,7 @@
             ];
 
             // Affiche la liste des équipes des pays
-            foreach($listePays as $pays ){
+            foreach ($listePays as $pays ){
                 echo $pays->listerEquipes();
             }
 
@@ -64,8 +70,22 @@
             ];
 
             // Affiche la liste des joueurs de chaque équipe
-            foreach($listeEquipes as $equipe) {
+            foreach ($listeEquipes as $equipe) {
                 echo $equipe->historiqueJoueurs();
+            }
+
+            ?>
+            <h1>Carrière de chaque joueur :</h1>
+            <?php
+
+            // Liste les joueurs dans un tableau
+            $listeJoueurs = [
+                $joueur1, $joueur2, $joueur3, $joueur4
+            ];
+
+            // Affiche la carrière de chaque joueur
+            foreach ($listeJoueurs as $joueur) {
+                echo $joueur->afficherCarriere();
             }
         ?>
     </body>
